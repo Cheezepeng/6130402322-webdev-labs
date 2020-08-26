@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    background-color: lightblue;
+    margin: 10px 625px 10px 625px;
+}
+
+p{
+    border: 10px solid green;
+    padding: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: lightyellow;
+}

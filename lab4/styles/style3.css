@@ -1,0 +1,23 @@
+.yellow{
+    background-color:yellow;
+}
+
+.red{
+    background-color: red;
+}
+
+table{
+    border-collapse: collapse;
+    
+}
+td, th {
+    border: 1px solid lightgrey;
+    text-align: right;
+    padding: 10px;
+}
+
+
+
+.left{
+    text-align: left;
+}

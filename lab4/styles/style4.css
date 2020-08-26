@@ -1,0 +1,18 @@
+.inputconfig{
+    width: 100%;
+    padding: 20px;
+}
+
+.submit {
+    width: 20%;
+    padding: 20px;
+    background-color: #00cc00;
+    color: white;
+}
+.submit:hover {
+    background: #008800;
+}
+
+body{
+    background-color: #f2f2f2;
+}

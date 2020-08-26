@@ -1,0 +1,44 @@
+.div-blue{
+    
+    margin: 10px 1300px 5px 5px;
+    border: 5px solid blue;
+    background-color: lightblue;
+    padding: 5px;
+    
+}
+.div-green{
+    margin: 5px 1300px 5px 5px;
+    border: 5px solid green;
+    background-color: lightgreen;
+    padding: 5px;
+    
+}
+.circle{
+    list-style-type: circle;
+}
+
+
+
+.jnz {
+    background-color: rgb(51, 51, 49);
+    width: 100%;
+    padding: 15px;
+}
+body{
+
+    margin: 0;
+    padding: 0;
+}
+    .unorder{
+        background-color: violet;
+    }
+
+a {
+    
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+        
+    }
+
