@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.animate-me {
+  -webkit-animation: bgcolorchange 2s infinite;
+  animation: 2s infinite bgcolorchange;
+}
+@keyframes bgcolorchange {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+/* Chrome, Safari, Opera */
+ @-webkit-keyframes bgcolorchange {
+      0%   {background: red;}
+      
+      100% {background: blue;}
+ }
+ 
+</style>
+</head>
+<body>
+
+<div  class="animate-me"></div>
+
+</body>
+</html>

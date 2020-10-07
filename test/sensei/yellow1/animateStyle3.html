@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animating styles with requestAnimationFrame</title>
+    </head>
+    <body>
+    <div>
+        <img id="ohnoes" src="https://www.kasandbox.org/programming-images/creatures/OhNoes.png">
+        <h1>Oh noes, the world will end in
+            <span id="countdown">30</span>
+            seconds!
+        </h1>
+        <div id="info"></div>
+    </div>
+    
+  <script>
+  var infoDiv = document.getElementById("info");
+  
+  var countdown = document.getElementById("countdown");
+  var countItDown = function() {
+    var currentTime = parseFloat(countdown.textContent);
+    if (currentTime > 0) {
+       countdown.textContent = currentTime - 1;   
+    } else {
+        window.clearInterval(timer);
+    }
+    
+  };
+  var timer = window.setInterval(countItDown, 1000);
+  
+  // Step 1. What element do we want to animate?
+  var ohnoes = document.getElementById("ohnoes");
+  ohnoes.style.width = "50px";
+      
+  // Step 2. What function will change it each time?
+  var makeItBigger = function() {
+      infoDiv.textContent = ohnoes.style.width;
+      ohnoes.style.width = (parseFloat(ohnoes.style.width) + 1) + "px";
+  }
+  // Step 3: Call that on an interval
+  window.setInterval(makeItBigger, 1000/3);
+  </script>
+
+    </body>
+</html>

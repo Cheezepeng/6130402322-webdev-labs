@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-delay: 1s;
+  animation-duration: 2s;
+}
+.animate-me {
+  -webkit-animation: bgcolorchange 2s infinite;
+  animation: 2s infinite bgcolorchange;
+}
+@keyframes bgcolorchange {
+    0%   {background-color:red; left:0px; top:0px;}
+  50%  {background-color:yellow; left:200px; top:0px;}
+  100%  {background-color:red; left:0px; top:0px;}
+}
+/* Chrome, Safari, Opera */
+ @-webkit-keyframes bgcolorchange {
+      0%   {background: red;}
+      50% {background: yellow;}
+      100% {background: red;}
+ }
+ 
+</style>
+</head>
+<body>
+
+<div  class="animate-me"></div>
+
+</body>
+</html>
