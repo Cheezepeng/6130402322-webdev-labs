@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Student Information</title>
+
+    <style>
+
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <h1>Loading Student Information</h1>
+
+
+    <pre></pre>
+    <script>
+        var poemDisplay = document.querySelector('pre');
+        function updateDisplay(places) {
+            /*
+            students = students.replace(" ", " ");
+            students = students.toLowerCase();
+            */
+            var url = places + '.json';
+            fetch(url)
+                .then(function (response) {
+                    response.json()
+                        .then(function (text) {
+                            console.log(text);
+                            for (let item of text.results) {
+                                console.log(item);
+                                console.log(item.name);
+                            } 
+                        })
+                })
+        };
+        updateDisplay('places');
+    </script>
+
+</body>
+
+</html>

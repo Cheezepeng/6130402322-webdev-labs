@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Student Information</title>
+
+    <style>
+        .name{
+            color: blue;
+        }
+        .location{
+            color: green;
+        }
+      
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+    <ol></ol>
+    <script>
+        var poemDisplay = document.querySelector('ol');
+            function updateDisplay(places) {
+                var url =  places + '.json';
+                var dog = "dog";
+               fetch(url).then(response=>{
+                   return response.json();
+                  }).then(data =>{
+                    result = data.results
+                    for (let index of result){
+                        let names = document.createElement('span');
+                        names.innerHTML = "name = " + index.name;
+                        names.className = "name";
+
+                        let locate = document.createElement('span');
+                        locate.innerHTML = "location = " +
+                        index.geometry.location.lat + " " +
+                        index.geometry.location.lng + "<br>";
+                        locate.className = "location";
+
+                        var list = document.createElement('li');
+                        list.appendChild(names);
+                        list.innerHTML += "<br>";
+                        list.append(locate);
+                        
+                        poemDisplay.appendChild(list);
+                        console.log(index);
+                    }
+                  }).catch(err =>{
+                      poemDisplay.append(dog.value);
+                  });
+               
+            };
+            updateDisplay('places');
+        </script>
+        
+    
+  </body>
+</html>
+
