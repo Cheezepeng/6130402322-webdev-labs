@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img {
+  border-radius: 50%;
+  border: 3px solid blue;
+    }
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+<h1><a href="https://github.com/Cheezepeng/"></a></h1>
+    
+    <script>
+        
+        fetch('https://api.github.com/users/Cheezepeng')
+        .then(response => response.json())
+        .then(githubUser => {
+            let img = document.createElement('img');
+            let name = document.createElement('h1');
+            img.src = githubUser.avatar_url;
+            img.className = "promise-avatar-example";
+            name.innerHTML = "<a href=https://github.com/Cheezepeng/>Saubpong Maneechak</a>";
+            
+            document.body.append(name);
+            document.body.append(img);
+
+
+            
+        });
+    </script>
+</body>
+</html>
