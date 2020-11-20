@@ -15,8 +15,4 @@ app.get('/1view', function(req, res){
     });
 });
 
-
-
-
-
 app.listen(3000);

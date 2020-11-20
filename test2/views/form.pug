@@ -1,0 +1,18 @@
+html
+    head
+        title Form Tester
+    body
+        form(action = "/", method = "POST")
+            div
+                label(for = "say") Name:
+                input(name = "name" value = "Saubpong") 
+            br
+            div
+                label(for = "to") Internship company:
+                input(name ="intern" value = "IBM Research Walson")
+            br
+            div
+                label(for = "to") Skills:
+                input(name ="skill" value = "HTML, CSS, JavaScript")
+            br
+            button(type = "submit") Send my greetings

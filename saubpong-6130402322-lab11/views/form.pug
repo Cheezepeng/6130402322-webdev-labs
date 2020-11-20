@@ -1,0 +1,20 @@
+html
+    head
+        title Form Tester
+    body
+        h1(style = "text-align: center") Student Form
+        form(action = "/", method = "POST")
+            div(style="width: 400px")
+                label(for = "say") Name:
+                input(name = "name" value = "Saubpong" style = "float:right") 
+            br
+            div(style="width: 400px")
+                label(for = "to") Internship company:
+                input(name ="intern" value = "IBM Research Walson" style = "float:right")
+            br
+            div(style="width: 400px")
+                label(for = "to") Skills:
+                input(name ="skill" value = "HTML, CSS, JavaScript" style = "float:right")
+            br
+            button(type = "submit") Send my greetings
+
